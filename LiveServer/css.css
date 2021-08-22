@@ -1,0 +1,177 @@
+.kontejner{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    background-image: linear-gradient( #451e3e ,#851e3e, #051e3e );
+    background-size: 100%;
+    
+}
+
+.kontforma1{
+    display:flex;
+    flex-direction: column;
+    flex: 1 1 10px;
+    min-width: 200px; 
+    max-width: 250px;
+    font-family: fantasy;
+    align-items: center;
+
+    
+}
+.sluzbenalica
+{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+.kontlokacije{
+    display:flex;
+    flex-basis: 500px;
+    border:1px solid #142342;
+    flex-direction: column;
+    flex: 1 1 10px;
+    background-color: transparent;
+ 
+}
+.stat{
+    display:flex;
+    flex-grow:1;
+    flex-direction: column;
+    text-align: center;
+    font-weight: 900;
+}
+.lok
+{
+    border:1px solid black;
+}
+.lok,.levo,.desno{
+  
+    display:flex;
+    flex: 1 1 10px;
+    margin: 5px;
+    flex-direction: row;
+    text-align:center;
+    background-color: rgb(80, 57, 122);
+    font-weight: 900;
+    
+}
+.naslov{ 
+   
+
+    text-align: center;
+    font-size: 40px;
+    color: rgba(136, 17, 90, 0.795);
+    border:1px solid #142342;
+    background-color: #251e3e;
+    opacity: 0.7;
+    font-weight: 900;
+  
+}
+.levo{
+  
+    margin:0;
+    border:0;
+    background-color: #142342;
+
+}
+.desno{
+    margin:0;
+    border:0;
+    background-color: #360e72c7  ;
+    
+}
+.rezz
+{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+}
+.stattext{
+    color: #2e003e;
+    font-size: 20px;
+ 
+    opacity: 0.7;
+    
+}
+.st1
+{
+    font-size: 16px;
+    font-weight: 1000;
+}
+.delegiranje
+{
+    
+    display:flex;
+    flex-direction: column;
+    flex: 1 1 10px;
+    background-color: transparent;
+    color: black;
+    font-family:fantasy;
+
+}
+
+.naslovdelegiranje
+{
+    background-color:  #251e3e;
+    color: rgba(136, 17, 90, 0.795);
+    text-align: center;
+    font-size: 20px;
+    opacity: 0.7;
+}
+
+
+table,th,tr,td{
+
+    border: 1px solid black;
+
+}
+table
+{
+
+}
+th,tr,td{
+    
+    border-collapse: collapse;
+    border: 1px solid black;
+ 
+
+}
+td
+{
+    min-width: 150px;
+    
+}
+
+
+@media only screen and (max-width: 1250px) {
+    .kontejner {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+.kontforma1{
+    display:flex;
+    flex-direction: row;
+    flex-grow: 1;
+    min-width: 400px; 
+   max-width: 100%;
+   justify-content: space-around;
+  
+    
+}
+  }
+
+  button
+  {
+      width: 120px;
+      opacity: 0.75;
+      background-color: #251e3e;
+      border: 1px solid black;
+      color:rgb(133, 125, 115);
+
+  }
+  select
+  {
+      background-color: transparent;
+  }
