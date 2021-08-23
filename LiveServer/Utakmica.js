@@ -160,7 +160,7 @@ export class Utakmica{
             }
             else
             {
-              alert("stats value:"+stats.value);
+              //alert("stats value:"+stats.value);
                 this.statistike[stats.value].azurirajstatistiku(this.kontejner.querySelector(`input[name='${this.domacin+this.gost}']:checked`).value);//treba zapamtiti ovo, imamo koji je tim
             }
           
@@ -207,7 +207,7 @@ export class Utakmica{
         let Glavnesudije=["Mitic Milan","Milanovic Milos","Bjorn Kuipers","Pierluigi Colina","Damir Skomina","Trajkovic Danijel", "Cuneyt Cakir","Szymon Marciniak","Danni Makellie"];
 
     
-        alert("duzina glavnesudije: "+this.glavnesudije.length);
+        //alert("duzina glavnesudije: "+this.glavnesudije.length);
         for(let i=0; i<this.glavnesudije.length;i++){
             opcija=document.createElement("option");
             opcija.innerHTML=this.glavnesudije[i].sudija;
@@ -261,11 +261,11 @@ export class Utakmica{
 
         dugmesllica.onclick=(ev)=>{
 
-            alert("sluzba: ")
+            //alert("sluzba: ");
             if(this.sluzba.length!=0){
             this.sluzba.forEach(el=>
                 {
-                    alert("el.vjuuu; "+ this.sudijepomocnici[p1sudije.value].sudija + this.sudijepomocnici[p2sudije.value].sudija);
+                    //alert("el.vjuuu; "+ this.sudijepomocnici[p1sudije.value].sudija + this.sudijepomocnici[p2sudije.value].sudija);
 
                  
                     if(this.sudijepomocnici[p1sudije.value].sudija==this.sudijepomocnici[p2sudije.value].sudija)
@@ -276,7 +276,7 @@ export class Utakmica{
 
                     }
                     else{
-                        alert("ilazim ovde "+el.pomocnik2 +el.pomocnik1);
+                        //alert("ilazim ovde "+el.pomocnik2 +el.pomocnik1);
                         if(el.pomocnik1==el.pomocnik2)
                         {
                             el.azurirajdelegiranje(this.glavnesudije[sudije.value].sudija, this.sudijepomocnici[p1sudije.value].sudija,this.sudijepomocnici[p2sudije.value].sudija, 0,(this.kontejner.querySelector(".delegiranje")));
@@ -294,7 +294,7 @@ export class Utakmica{
                 this.dodajSluzbu(new Sluzbenalica(0, "", "","",this.id));
                 this.sluzba.forEach(el=>
                     {
-                       alert("trebalo bi da je div dlegiranje: "+ (this.kontejner.querySelector(".delegiranje")));
+                      // alert("trebalo bi da je div dlegiranje: "+ (this.kontejner.querySelector(".delegiranje")));
                        
                         el.azurirajdelegiranje(this.glavnesudije[sudije.value].sudija, this.sudijepomocnici[p1sudije.value].sudija, this.sudijepomocnici[p2sudije.value].sudija, 0,(this.kontejner.querySelector(".delegiranje")));
             
@@ -320,9 +320,9 @@ export class Utakmica{
             this.sluzba.forEach(el=>
                 {
                    el.BrisiDelegiranje();
-                   alert("sad element treba da se obrise iz niza");
+                   //alert("sad element treba da se obrise iz niza");
                    this.sluzba.pop(el);
-                   alert("duzina niza : "+this.sluzba.length);
+                   //alert("duzina niza : "+this.sluzba.length);
                 });
         }
 

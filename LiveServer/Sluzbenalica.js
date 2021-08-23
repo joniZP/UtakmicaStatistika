@@ -46,7 +46,7 @@ export class Sluzbenalica
          host.appendChild(redd);
          
          let el=document.createElement("td");
-         el.innerHTML="Glavni sudija:";
+         el.innerHTML="Glavni sudija";
          redd.appendChild(el);
         
          var words;
@@ -66,7 +66,7 @@ export class Sluzbenalica
          host.appendChild(r2);
          
          el=document.createElement("td");
-         el.innerHTML="Prvi pomocni sudija:";
+         el.innerHTML="Prvi pomocni sudija";
          r2.appendChild(el);
 
         
@@ -87,7 +87,7 @@ export class Sluzbenalica
          host.appendChild(r3);
          
          el=document.createElement("td");
-         el.innerHTML="Drugi pomocni sudija:";
+         el.innerHTML="Drugi pomocni sudija";
          r3.appendChild(el);
 
         
@@ -109,14 +109,14 @@ export class Sluzbenalica
     azurirajdelegiranje(a, b, g, pom, pom1)
     {
 
-        alert("this.tekmaid:"+ this.tekmaid);
-        alert("a=" +a+"\n pom="+pom+"\n glavni="+this.glavni);
+       
+       
         if(pom==0 )
         {
             this.glavni=a;
             this.pomocnik1=b;
             this.pomocnik2=g;
-            alert("usao sam u prazno delegiranje i sad upisujem u bazu");
+            
 
             fetch("https://localhost:5001/Utakmica/UpisiSudije", {
                 method: "POST",
@@ -133,13 +133,13 @@ export class Sluzbenalica
                 })
             }).then(p => {
                 if (p.ok) {
-                    alert("ulazim u upis.ok");
+                    //alert("ulazim u upis.ok");
                   // alert("this.glavni: "+ this.glavni+this.pomocnik1+this.pomocnik2+ "this.etekma:: "+this.tekmaid);
             
                    
                 }
                 else if (p.status == 400) {
-                    alert("johnyy");
+                    
                     // BadRequest vraća lokaciju kao json. Zato čitamo taj json ispod i upisujemo u greskaLokacija, koju ispisujemo u alert-u.
                   
                         alert("Nemoguce je da isti pomocnik bude delegiran 2 puta za isti mec, preporuka sa vrha - Nikola Petrovic(2-1)");
@@ -162,7 +162,7 @@ export class Sluzbenalica
         this.pomocnik1=b;
         this.pomocnik2=g;
 
-        alert("usao sam u crtanje meca sa praznim delegiranjem");
+        
         //alert("id: "+ this.id+" glavni: "+ this.glavni+" pom1: "+ this.pomocnik1+" pom2: "+this.pomocnik2+" tekma1.id:" +this.tekmaid)  
         fetch("https://localhost:5001/Utakmica/IzmeniSudije", {
                 method: "PUT",
@@ -179,8 +179,8 @@ export class Sluzbenalica
                 })
             }).then(p => {
                 if (p.ok) {
-                    alert("ulazim u upis.ok");
-                    alert("a: "+this.a);
+                    //alert("ulazim u upis.ok");
+                    //alert("a: "+this.a);
                    
 
                     if(this.glavni!="")
@@ -211,7 +211,7 @@ export class Sluzbenalica
                    
                 }
                 else if (p.status == 400) {
-                    alert("johnyy");
+                   
                     // BadRequest vraća lokaciju kao json. Zato čitamo taj json ispod i upisujemo u greskaLokacija, koju ispisujemo u alert-u.
                   
                         alert("Nemoguce je da isti pomocnik bude delegiran 2 puta za isti mec, preporuka sa vrha - Nikola Petrovic(iz 2 u 1)");
@@ -229,7 +229,7 @@ export class Sluzbenalica
 
     BrisiDelegiranje()
     {
-        alert("brisem delegiranje s aidjem: "+ this.id);
+       // alert("brisem delegiranje s aidjem: "+ this.id);
         fetch("https://localhost:5001/Utakmica/ObrisiDelegiranje/" + this.id, {
             method: "DELETE",
             })
@@ -239,7 +239,7 @@ export class Sluzbenalica
                     {
                       
                         this.container.removeChild(this.container.querySelector("table"));
-                         alert("brisanje ok");
+                        // alert("brisanje ok");
                     }
                      else if (p.status == 400)
                     {
@@ -257,7 +257,7 @@ export class Sluzbenalica
 
     pribaviicrtajdelegiranje(host)
     {
-        alert("ulazim u pribavi i crtaj delegiranje");
+    alert("ulazim u pribavi i crtaj delegiranje");
         fetch("https://localhost:5001/Utakmica/PreuzmiDelegiranje").then(p=>
         { 
             
@@ -274,7 +274,7 @@ export class Sluzbenalica
                         this.pomocnik2=delegiranje.pomocnik2;
                         
                         this.crtajtabelu(host);
-                        alert("pribavi i crtaj delefgiranje ok")
+                        //alert("pribavi i crtaj delefgiranje ok")
                     }
                     
                 });;

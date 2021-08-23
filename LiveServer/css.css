@@ -13,7 +13,8 @@
     flex: 1 1 10px;
     min-width: 200px; 
     max-width: 250px;
-    font-family: fantasy;
+    color:black;
+    font-family:Arial, Helvetica, sans-serif;
     align-items: center;
 
     
@@ -52,7 +53,7 @@
     margin: 5px;
     flex-direction: row;
     text-align:center;
-    background-color: rgb(80, 57, 122);
+    background-color: rgb(109, 88, 150);
     font-weight: 900;
     
 }
@@ -61,7 +62,7 @@
 
     text-align: center;
     font-size: 40px;
-    color: rgba(136, 17, 90, 0.795);
+    color: rgba(179, 79, 141, 0.795);
     border:1px solid #142342;
     background-color: #251e3e;
     opacity: 0.7;
@@ -88,7 +89,7 @@
     font-weight: 900;
 }
 .stattext{
-    color: #2e003e;
+    color: #d4bedb;
     font-size: 20px;
  
     opacity: 0.7;
@@ -106,15 +107,15 @@
     flex-direction: column;
     flex: 1 1 10px;
     background-color: transparent;
-    color: black;
-    font-family:fantasy;
+    color: #d4bedb;
+    font-family:'Courier New', Courier, monospace;
 
 }
 
 .naslovdelegiranje
 {
     background-color:  #251e3e;
-    color: rgba(136, 17, 90, 0.795);
+    color: #d4bedb;
     text-align: center;
     font-size: 20px;
     opacity: 0.7;
@@ -134,6 +135,7 @@ th,tr,td{
     
     border-collapse: collapse;
     border: 1px solid black;
+    
  
 
 }
@@ -168,7 +170,7 @@ td
       opacity: 0.75;
       background-color: #251e3e;
       border: 1px solid black;
-      color:rgb(133, 125, 115);
+      color:rgb(228, 220, 211);
 
   }
   select
